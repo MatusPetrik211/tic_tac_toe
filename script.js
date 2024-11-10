@@ -69,6 +69,7 @@ function GameController() {
             }
             if(GameBoard.checkBoard(gameboard)) {
                 restartGame();
+                player = player === players[0] ? players[1] : players[0];
                 results.textContent = `${player.name} WON!!!`;  
                 setTimeout(() => {
                     results.textContent = ``;  
